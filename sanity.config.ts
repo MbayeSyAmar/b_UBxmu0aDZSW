@@ -8,6 +8,8 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 export default defineConfig({
   name: 'crmtn-cms',
   title: 'CRMTN - Centre de Recherche MTN',
+  // AJOUTEZ CETTE LIGNE ICI :
+  basePath: '/studio',
   projectId,
   dataset,
   plugins: [

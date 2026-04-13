@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/lib/language-context'
+import Chatbot from '@/components/Chatbot'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className="antialiased">
         <LanguageProvider>
           {children}
+          <Chatbot language="fr" />
           {process.env.NODE_ENV === 'production' && <Analytics />}
         </LanguageProvider>
       </body>
